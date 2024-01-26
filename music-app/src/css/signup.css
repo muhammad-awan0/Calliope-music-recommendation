@@ -1,0 +1,271 @@
+.signup-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}
+
+.signup-part {
+    font-family: 'K2D', sans-serif;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30rem;
+    left: 50%;
+    margin-left: -15rem; /* has to be half the width! */
+    border-radius: 0.5rem;
+}
+
+.signup-part h3 {
+    font-weight: 300;
+}
+
+.signup-part-text {
+    margin-left: 2rem;
+}
+
+.signup-part-text h1 {
+    margin-bottom: 0.1rem;
+}
+
+.explore-test {
+    margin: none;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.username-signup, .password-signup {
+    text-indent: 1rem;
+    font-family: 'K2D', sans-serif;
+    font-size: 1.2rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.password-signup {
+    margin-bottom: 0.3rem;
+}
+
+.signup-form h3 {
+    color: #0051CA;
+    margin-bottom: 0.5rem;
+}
+
+.signup-form a {
+    color: #0051CA;
+    margin-top: 0.5rem;
+    text-decoration: none;
+}
+
+.signup-form Link {
+    text-decoration: none;
+}
+
+.submit-button {
+    color: white;
+    font-family: 'K2D', sans-serif;
+    font-size: 2rem;
+    height: 5rem;
+    width: 23rem;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+}
+
+.signup-text {
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+/* SMALL SCREENS  */
+@media (max-width: 730px) {
+    #topleftname {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .signup-part {
+        width: 100%;
+        height: 100%;
+        margin-left: -50%; /* has to be half the width! */
+        border-radius: 0;
+    }
+
+    #topleftname {
+        display: none;
+    }
+
+    .signup-part h3 {
+        font-weight: 300;
+    }
+    
+    .signup-part-text {
+        margin-left: 2rem;
+    }
+    
+    .signup-part-text h1 {
+        margin-bottom: 0.1rem;
+    }
+    
+    .explore-test {
+        margin: none;
+    }
+    
+    .invalid-credentials {
+        color: rgb(215, 77, 77);
+    }
+    
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2rem;
+    }
+    
+    .username-input, .password-input {
+        text-indent: 1rem;
+        font-family: 'K2D', sans-serif;
+        font-size: 1.2rem;
+        height: 3rem;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: 0.3rem;
+    }
+    
+    .password-input {
+        margin-bottom: 0.3rem;
+    }
+    
+    .signup-form h3 {
+        color: #0051CA;
+        margin-bottom: 0.5rem;
+    }
+    
+    .signup-form a {
+        color: #0051CA;
+        margin-top: 0.5rem;
+        text-decoration: none;
+    }
+    
+    .submit-button.mobile {
+        color: white;
+        font-family: 'K2D', sans-serif;
+        font-size: 2rem;
+        height: 5rem;
+        width: 100%;
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        border-radius: 4rem;
+        cursor: pointer;
+        border: none;
+        background-color: black;
+    }
+    
+    .signup-text {
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-height: 500px) {
+    body {
+        box-sizing: border-box;
+        overflow-x: hidden;
+        background-color: #D9D9D9;
+    }
+
+    .signup-part {
+        width: 100%;
+        height: 100%;
+        margin-left: -50%; /* has to be half the width! */
+        border-radius: 0;
+    }
+
+    #topleftname {
+        display: none;
+    }
+
+    .signup-part h1 {
+        font-size: 1.4rem;
+    }
+
+    .signup-part h3 {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+    
+    .signup-part-text {
+        margin-left: 2rem;
+    }
+    
+    .signup-part-text h1 {
+        margin-bottom: 0.1rem;
+    }
+    
+    .explore-test {
+        margin: none;
+    }
+    
+    .invalid-credentials {
+        color: rgb(215, 77, 77);
+    }
+    
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2rem;
+    }
+    
+    .password-input {
+        margin-bottom: 0.3rem;
+    }
+    
+    .signup-form h3 {
+        color: #0051CA;
+        margin-bottom: 0.5rem;
+    }
+    
+    .signup-form a {
+        color: #0051CA;
+        margin-top: 0.5rem;
+        text-decoration: none;
+    }
+    
+    .submit-button.mobile {
+        color: white;
+        font-family: 'K2D', sans-serif;
+        font-size: 2rem;
+        height: 4rem;
+        width: 100%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 4rem;
+        cursor: pointer;
+        border: none;
+        background-color: black;
+    }
+    
+    .signup-text {
+        font-size: 1rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+}

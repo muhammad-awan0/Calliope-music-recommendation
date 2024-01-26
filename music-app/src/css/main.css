@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@100;200;300;400;500;700&family=Rubik:wght@400;500;700&display=swap');
+
+body {
+  height: 100%;
+}
+
+.main-background {
+  background: linear-gradient(to bottom, #2a7fc5 0%, #000000 40%);
+  min-height: 100vh;
+  height: 110rem;
+  width: 100vw;
+  padding: 0;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  
+}
+
+/* NAVBAR DESIGN */
+
+.navbar {
+  font-family: 'K2D', sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.logout-container {
+  padding-top: 1rem;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logout-container button {
+  width: 100%;
+}
+
+.profile {
+  height: 4rem;
+  cursor: pointer;
+}
+
+
+
+/* SEARCH BAR */
+
+.rec-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.welcome-text{
+  margin: 0;
+  padding-top: 1.5rem;
+  font-family: 'K2D', sans-serif;
+  font-size: 1.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  margin-top: 0.5rem;
+  padding-left: 0;
+  width: 60rem;
+  height: 3rem;
+  text-indent: 1rem;
+  font-size: 1.1rem;
+  border: hidden;
+  border-radius: 1rem;
+}
+
+.song-card-image {
+  max-height: 5rem;
+  border: 0.1rem solid white;
+}
+
+body.loading-cursor {
+  cursor: wait;
+}
+
+/* EVERYTHING RELATED TO RESULTS (both the dropdown and recommendations) */
+
+.recommendation-text {
+  margin-top: 5rem;
+  margin-bottom: 0;
+  font-family: 'K2D', sans-serif;
+  font-size: 1.75rem;
+}
+
+.results-container {
+  position: relative;
+}
+
+.possible-results {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  width: 60.4rem;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  border: 1px solid white;
+  border-top: none;
+  border-radius: 1rem;
+}
+
+.song-card {
+  margin: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 1rem;
+}
+
+.song-details {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.song-details h2, h4 {
+  margin: 0;
+}
+
+/* SONG RESULTS  */
+
+.song-results-container {
+  font-family: 'K2D', sans-serif;
+  font-size: 1.5rem;
+  width: 40rem; 
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.song-result {
+  background-color: #20639a;
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Set the width to 100% */
+  margin: 0 auto; /* Center the item horizontally */
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.song-result-details {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.song-result-details h3, h4 {
+  margin: 0;
+}
+
+.preview-link {
+  margin-left: auto;
+}
+
+.preview-button {
+  cursor: pointer;
+  height: 3rem;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+/* MAKING IT RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .search-bar {
+    width: 40rem;
+  }
+
+  .possible-results {
+    width: 40rem;
+  }
+
+  .song-result {
+    width: 32rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .welcome-text {
+    font-size: 1rem;
+  }
+  .recommendation-text {
+    font-size: 1rem;
+  }
+  .search-bar {
+    width: 20rem;
+  }
+  .song-results-container {
+    width: 20rem;
+  }
+  .possible-results {
+    width: 20rem;
+  }
+  .song-result {
+    width: 18rem;
+  }
+  .preview-button {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 512px) {
+  .navbar {
+    justify-content: right;
+  }
+}
+
+@media (max-width: 350px) {
+  .welcome-text::after {
+    content: "Please flip your device!";
+    display: block; /* Ensure the pseudo-element is displayed */
+  }
+  /* Add similar rules for other elements you want to hide */
+  .search-bar,
+  .recommendation-text,
+  .song-results-container {
+    display: none;
+  }
+}
+

@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@100;200;300;400;500;700&family=Rubik:wght@400;500;700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* LOGO STUFF */
+.logo {
+    font-family: 'K2D', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.logo img {
+    max-height: 5rem;
+    margin-right: 1rem;
+}
+/* ---------------- FIRST PAGE STUFF ------------------*/
+.main-container {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 48rem;
+}
+
+.page-one {
+    display: flex;   
+    flex-direction: column;
+    height: 48rem;
+}
+
+.logo-container {
+    margin: 0;
+    font-family: 'K2D', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: none;
+    overflow: hidden;
+    align-items: flex-start;
+    width: 100%;
+    height: 7rem;
+}
+
+.person-description-container {
+    margin-top: 0;
+    height: 41rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.person {
+    height: 41rem;
+    display: block;
+    margin-left: 4rem;
+}
+
+.po-description {
+    font-size: 1.5rem;
+    font-family: 'K2D', sans-serif;
+    font-weight: 1000;
+    color: white;
+    background-color: black;
+    height: 41rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; /* Center items vertically */
+    text-align: center;
+}
+
+
+.po-toptext {
+    font-weight: 100;
+}
+
+.po-signup {
+    font-size: 2rem;
+    font-weight: 200;
+    font-family: 'K2D', sans-serif;
+    color: white;
+    cursor: pointer;
+    background-color: #1E6F9C;
+    border: none;
+    height: 6rem;
+    width: 13rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 0 rgba(30, 111, 156, 0); 
+    animation: pulse 1.7s ease infinite; 
+    
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(30, 111, 156, 0.5); /* No box shadow at the beginning */
+    }
+    100% {
+        box-shadow: 0 0 0 4rem rgba(30, 111, 156, 0); /* Adjust spread for a continuous outward pulse */
+    }
+}
+
+/* SMALL SCREENS */
+@media (max-width: 1100px) {
+    .page-one {
+        padding: 0;
+    }
+
+    .main-container {
+        background-color: black;
+    }
+    
+    .person {
+       display: none;
+    }
+    
+
+}
+
+/*  ------------------- END OF FIRST PAGE STUFF ------------------- */
+
+/*  ------------------- START OF SECOND PAGE STUFF ------------------- */
+
+.page-two {
+    position: relative;
+    overflow: hidden;
+    height: 53rem;
+}
+
+.pt-scroller {
+    height: 100%;
+    background-image: url('../images/scrolltest.jpg');
+    /* filter: brightness(80%); */
+    width: 200%;
+    animation: slide 30s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0%);
+    }
+
+    100% {
+        transform: translate(-1396px);
+    }
+}
+
+.pt-description-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    max-width: 600px; 
+    width: 90%;
+
+    
+}
+
+.pt-description {
+    font-family: 'K2D', sans-serif;
+    color: #FFF; 
+    background-color: rgb(0, 0, 0); 
+    padding: 2rem; 
+    border-style: solid;
+    border-color: #3498db; 
+    border-width: 2px; 
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.pt-description h1 {
+    font-size: 4rem; 
+    color: #3498db; 
+    margin-bottom: 1rem; 
+    font-weight: bold;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #3498db, #e84393); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    font-size: 2.5rem;
+    font-weight: bold; 
+    display: inline;
+    margin: 0; 
+    padding: 0; 
+}
+
+.pt-description p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4; 
+}
+
+.pt-footer {
+    background-color: #000000; 
+    color: #ecf0f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center; 
+    padding: 2rem 0; 
+    border-top: 4px solid #9711bc; 
+}
+
+.pt-footer p {
+    padding-top: 1rem;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6; 
+}
+
+.pt-footer p:first-of-type {
+    font-weight: bold; 
+    font-size: 1.2rem; 
+}
+
+.pt-footer p:last-of-type {
+    margin-top: 1rem; 
+    font-style: italic; 
+}
+
+
+.pt-footer a {
+    color: #3498db; 
+    text-decoration: none; 
+    margin: 0 0.5rem; 
+}
+
+
+
+@media (max-width: 512px) {
+
+    .logo {
+        display: none;
+    }
+
+    .po-description {
+        font-size: 1rem;
+    }
+
+    .page-two {
+        position: relative;
+        overflow: hidden;
+        height: 53rem;
+    }
+
+    .pt-description-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* Ensure it's above the background */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .pt-description {
+        font-family: 'K2D', sans-serif;
+        width: 20rem;
+        color: white;
+        background-color: black;
+        padding: 1rem;
+        border-style: solid;
+        border-color: white;
+        border-width: 1rem;
+        border-radius: 0.5rem;
+    }
+    
+    .pt-description h1 {
+        font-size: 2rem;
+    }
+    
+    .pt-description {
+        font-size: 1.5rem;
+    }
+
+    .pt-scroller {
+        width: 400%; 
+        animation: slide 15s linear infinite; 
+    }
+    
+}
+
+@media (max-width: 356px) {
+    .pt-description-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* Ensure it's above the background */
+        justify-content: center;
+        align-items: center;
+    }
+    .pt-description {
+        width: 13rem;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .pt-scroller {
+        width: 600%; 
+        animation: slide 15s linear infinite; 
+    }
+}
+
+/* END OF SECOND PAGE AND END OF HOME PAGE */
+
+/* ------- LOGIN PAGE ---------- */
+
+.login-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}
+
+#topleftname {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+.login-part {
+    font-family: 'K2D', sans-serif;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30rem;
+    left: 50%;
+    margin-left: -15rem; /* has to be half the width! */
+    border-radius: 0.5rem;
+}
+
+.login-part h3 {
+    font-weight: 300;
+}
+
+.login-part-text {
+    margin-left: 2rem;
+}
+
+.login-part-text h1 {
+    margin-bottom: 0.1rem;
+}
+
+.explore-test {
+    margin: none;
+}
+
+.invalid-credentials {
+    color: rgb(215, 77, 77);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.username-input, .password-input {
+    text-indent: 1rem;
+    font-family: 'K2D', sans-serif;
+    font-size: 1.2rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.password-input {
+    margin-bottom: 0.3rem;
+}
+
+.login-form h3 {
+    color: #0051CA;
+    margin-bottom: 0.5rem;
+}
+
+.login-form a {
+    color: #0051CA;
+    margin-top: 0.5rem;
+    text-decoration: none;
+}
+
+.submit-button {
+    color: white;
+    font-family: 'K2D', sans-serif;
+    font-size: 2rem;
+    height: 5rem;
+    width: 23rem;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+}
+
+.signup-text {
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 730px) {
+    #topleftname {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .login-part {
+        width: 100%;
+        height: 100%;
+        margin-left: -50%; /* has to be half the width! */
+        border-radius: 0;
+    }
+
+    #topleftname {
+        display: none;
+    }
+    
+    .login-part-text {
+        margin-left: 2rem;
+    }
+    
+    .login-part-text h1 {
+        margin-bottom: 0.1rem;
+    }
+    
+    .explore-test {
+        margin: none;
+    }
+    
+    .invalid-credentials {
+        color: rgb(215, 77, 77);
+    }
+    
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2rem;
+    }
+    
+    .username-input, .password-input {
+        text-indent: 1rem;
+        font-family: 'K2D', sans-serif;
+        font-size: 1.2rem;
+        height: 3rem;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: 0.3rem;
+    }
+    
+    .password-input {
+        margin-bottom: 0.3rem;
+    }
+    
+    .login-form h3 {
+        color: #0051CA;
+        margin-bottom: 0.5rem;
+    }
+    
+    .login-form a {
+        color: #0051CA;
+        margin-top: 0.5rem;
+        text-decoration: none;
+    }
+    
+    .submit-button.mobile {
+        color: white;
+        font-family: 'K2D', sans-serif;
+        font-size: 2rem;
+        height: 5rem;
+        width: 100%;
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        border-radius: 4rem;
+        cursor: pointer;
+        border: none;
+        background-color: black;
+    }
+    
+    .signup-text {
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-height: 500px) {
+    body {
+        box-sizing: border-box;
+        overflow-x: hidden;
+        background-color: #D9D9D9;
+    }
+
+    .login-part {
+        width: 100%;
+        height: 100%;
+        margin-left: -50%; /* has to be half the width! */
+        border-radius: 0;
+    }
+
+    #topleftname {
+        display: none;
+    }
+    
+    .explore-test {
+        margin: none;
+    }
+    
+    .invalid-credentials {
+        color: rgb(215, 77, 77);
+    }
+    
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2rem;
+    }
+    
+    .password-input {
+        margin-bottom: 0.3rem;
+    }
+    
+    .login-form h3 {
+        color: #0051CA;
+        margin-bottom: 0.5rem;
+    }
+    
+    .login-form a {
+        color: #0051CA;
+        margin-top: 0.5rem;
+        text-decoration: none;
+    }
+    
+    .submit-button.mobile {
+        color: white;
+        font-family: 'K2D', sans-serif;
+        font-size: 2rem;
+        height: 4rem;
+        width: 100%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 4rem;
+        cursor: pointer;
+        border: none;
+        background-color: black;
+    }
+    
+    .signup-text {
+        font-size: 1rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+}
+
