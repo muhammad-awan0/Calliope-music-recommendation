@@ -1,4 +1,16 @@
 {
+  "name": "fullstack-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server/server.js",
+    "music-app": "npm start --prefix music-app",
+    "server": "npm run start --prefix server",
+    "flask": "python music-app/src/recommendation.py",
+    "dev": "concurrently \"npm run server\" \"npm run music-app\" \"npm run flask\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
   "dependencies": {
     "react-redux": "^9.0.4",
     "redux": "^5.0.1",

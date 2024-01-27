@@ -4,7 +4,7 @@ import play from '../images/play-button.png'
 import stop from '../images/stop-button.png'
 
 export default function SongResult(props) {
-
+    console.log(props.id);
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -26,7 +26,14 @@ export default function SongResult(props) {
             }
             <img src={props.image_url} style={{height: "5rem"}}></img>
             <div className="song-result-details">
+                <a 
+                    className="song-link" 
+                    href={`https://open.spotify.com/track/${props.id}`} // Use the actual ID prop here
+                    target="_blank" // To open link in new tab
+                    rel="noopener noreferrer" // For security purposes
+                >
                 <h3>{props.name}</h3>
+                </a>
                 <h4>{artist}</h4>
             </div>
             {props.preview_url && 

@@ -32,22 +32,29 @@ body {
   padding-bottom: 0.5rem;
 }
 
-.logout-container {
-  padding-top: 1rem;
-  margin-right: 5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.logout-container button {
-  width: 100%;
-}
-
 .profile {
   height: 4rem;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition for scale */
 }
 
+.profile:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.logout-container button {
+  background-color: #1db954; /* Spotify green for illustration */
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.logout-container button:hover {
+  background-color: #1ed760; /* Lighter green on hover */
+}
 
 
 /* SEARCH BAR */
@@ -96,6 +103,7 @@ body.loading-cursor {
   font-size: 1.75rem;
 }
 
+
 .results-container {
   position: relative;
 }
@@ -116,6 +124,9 @@ body.loading-cursor {
   border-radius: 1rem;
 }
 
+
+
+
 .song-card {
   margin: 1rem 1rem;
   display: flex;
@@ -130,6 +141,12 @@ body.loading-cursor {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  transition: background-color 0.3s ease
+}
+
+.song-details:hover .song-name {
+  color: #8B80F9;
+  transition: color 0.2s ease; 
 }
 
 .song-details h2, h4 {
@@ -173,6 +190,10 @@ body.loading-cursor {
 
 .song-result-details h3, h4 {
   margin: 0;
+}
+
+.song-link{
+  text-decoration: none;
 }
 
 .preview-link {

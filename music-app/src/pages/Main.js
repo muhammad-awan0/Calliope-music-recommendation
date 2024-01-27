@@ -223,7 +223,8 @@ function Main() {
                 <SongResult 
                   artist={song.artists} 
                   name={song.track_name} 
-                  key={song.id}
+                  key={song.track_id}
+                  id={song.track_id}
                   image_url={song.image_url}
                   preview_url={song.preview_url}>
                 </SongResult>

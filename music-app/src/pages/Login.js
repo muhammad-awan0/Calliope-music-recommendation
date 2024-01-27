@@ -98,7 +98,6 @@ export default function Login() {
                             value={password}
                             onChange={handlePassword}>
                         </input>
-                        <a href="https:/youtube.com" target="_blank" rel="noopener noreferrer">Forgot your credentials?</a>
                         <input type="submit" className="submit-button mobile" form="login__form" value="Login"></input>
                         <p className="signup-text">New to Calliope? <Link to={'/signup'}>Sign Up!</Link></p>
                     </form>
