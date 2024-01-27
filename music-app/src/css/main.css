@@ -192,8 +192,9 @@ body.loading-cursor {
   margin: 0;
 }
 
-.song-link{
-  text-decoration: none;
+.song-link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* This will make the link use the text color of the parent element */
 }
 
 .preview-link {

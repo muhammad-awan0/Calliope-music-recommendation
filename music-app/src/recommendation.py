@@ -11,7 +11,9 @@ from spotipy.exceptions import SpotifyException
 import os
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://ray1guan:AV4DhHgGPAirMXrH@nodeexpressprojects.ujp23pk.mongodb.net/MUSICAPP?retryWrites=true&w=majority")
+client = MongoClient(
+    "mongodb+srv://ray1guan:AV4DhHgGPAirMXrH@nodeexpressprojects.ujp23pk.mongodb.net/MUSICAPP?retryWrites=true&w=majority"
+)
 db = client["MUSICAPP"]  # Replace with your database name
 collection = db["tracks2"]
 data = list(collection.find())
@@ -43,7 +45,6 @@ scaler = MinMaxScaler()
 music_df[musical_features] = scaler.fit_transform(music_df[musical_features])
 
 feature_weights = {
-    "popularity": 1.0,
     "acousticness": 1.0,
     "danceability": 1.0,
     "energy": 1.0,
@@ -54,7 +55,7 @@ feature_weights = {
     "tempo": 1.0,
     "valence": 1.0,
     "duration_ms": 1.0,
-    "popularity": 2.0,
+    "popularity": 3.0,
 }
 
 os.environ["SPOTIPY_CLIENT_ID"] = "ea264bab04d84c00a06fe5e32134640c"
@@ -178,8 +179,11 @@ def recommend_music(track_id, num_recommendations=10, display_features=None):
     else:
         recommended_songs = music_df_local.iloc[similar_song_indices][index]
     recommended_songs["image_url"] = recommended_songs["track_id"].apply(get_image_url)
-    recommended_songs["preview_url"] = recommended_songs["track_id"].apply(get_preview_url)
+    recommended_songs["preview_url"] = recommended_songs["track_id"].apply(
+        get_preview_url
+    )
     return recommended_songs
+
 
 app = Flask(__name__)
 CORS(app)
