@@ -36,16 +36,24 @@ body {
   height: 4rem;
   cursor: pointer;
   transition: transform 0.3s ease; /* Smooth transition for scale */
+  margin-bottom: 0.2rem;
 }
 
 .profile:hover {
   transform: scale(1.1); /* Slightly increase size on hover */
 }
 
+.logout-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
 .logout-container button {
+  height: 1.5rem;
   background-color: #1db954; /* Spotify green for illustration */
   color: white;
-  padding: 0.5rem;
   border-radius: 0.3rem;
   border: none;
   cursor: pointer;

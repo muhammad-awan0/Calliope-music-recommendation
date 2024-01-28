@@ -35,6 +35,24 @@ app.get('/check/:id', verifyToken, async (req, res) => {
     res.status(200).json({msg: 'authorized!', user: user});
 });
 
+app.get('/login', async (req, res) => {
+    try {
+      // Perform authentication and handle sensitive information on the server
+      const response = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST",
+        body: `grant_type=client_credentials&client_id=${process.env.SPOTIFY_CLIENT_ID}&client_secret=${process.env.SPOTIFY_CLIENT_SECRET}`,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
+      const data = await response.json();
+      res.json(data);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 6000;
 mongoose.connect(process.env.MONGO_URI).then(()=> {

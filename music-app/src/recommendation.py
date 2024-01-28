@@ -10,9 +10,16 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from spotipy.exceptions import SpotifyException
 import os
 from pymongo import MongoClient
+from dotenv import load_dotenv
+
+load_dotenv()
+
+mongo_uri = os.environ.get("MONGO_URI")
+client_id = os.environ.get("SPOTIFY_CLIENT_ID")
+client_secret = os.environ.get("SPOTIFY_CLIENT_SECRET")
 
 client = MongoClient(
-    "mongodb+srv://ray1guan:AV4DhHgGPAirMXrH@nodeexpressprojects.ujp23pk.mongodb.net/MUSICAPP?retryWrites=true&w=majority"
+    mongo_uri
 )
 db = client["MUSICAPP"]  # Replace with your database name
 collection = db["tracks2"]
@@ -58,9 +65,9 @@ feature_weights = {
     "popularity": 3.0,
 }
 
-os.environ["SPOTIPY_CLIENT_ID"] = "ea264bab04d84c00a06fe5e32134640c"
-os.environ["SPOTIPY_CLIENT_SECRET"] = "c641689fee7345acbd2d4b061c3c89a7"
-os.environ["SPOTIPY_REDIRECT_URU"] = "http://localhost:8888/callback"
+os.environ["SPOTIPY_CLIENT_ID"] = client_id
+os.environ["SPOTIPY_CLIENT_SECRET"] = client_secret
+os.environ["SPOTIPY_REDIRECT_URI"] = "http://localhost:8888/callback"
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
 
 
@@ -200,7 +207,7 @@ def recommend():
 
         # Print the recommendations to the console
         print("Recommended Songs:")
-        print(recommended_songs)
+        # print(recommended_songs)
 
         return jsonify(recommended_songs.to_dict(orient="records"))
     except Exception as e:

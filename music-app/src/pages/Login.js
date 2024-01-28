@@ -40,13 +40,8 @@ export default function Login() {
                 })
             })
             
-            const spotifyResponse = await fetch("https://accounts.spotify.com/api/token", {
-                body: "grant_type=client_credentials&client_id=ea264bab04d84c00a06fe5e32134640c&client_secret=c641689fee7345acbd2d4b061c3c89a7",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                method: "POST"
-            });
+            // connecting to spotify API and getting client id and secret
+            const spotifyResponse = await fetch("http://localhost:3001/login"); 
 
             if (response.ok && spotifyResponse.ok) {
                 const data = await response.json();

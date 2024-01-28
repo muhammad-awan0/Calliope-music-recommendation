@@ -4,7 +4,6 @@ import play from '../images/play-button.png'
 import stop from '../images/stop-button.png'
 
 export default function SongResult(props) {
-    console.log(props.id);
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
